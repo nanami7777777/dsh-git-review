@@ -1,0 +1,46 @@
+{
+  "name": "dsh-git-review",
+  "version": "0.1.0",
+  "description": "Read-only Git change overview for DeepSeek Harness: staged, unstaged, untracked, conflicts and line counts.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./review": "./review.js"
+  },
+  "files": [
+    "index.js",
+    "review.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:harness": "node test/harness-smoke.mjs"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "cordis",
+    "git",
+    "plugin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanami7777777/dsh-git-review.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh": "0.2.0-rc.2"
+  }
+}
